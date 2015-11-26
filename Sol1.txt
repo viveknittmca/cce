@@ -1,1 +1,3 @@
 ∀x: Italian(x) → Roman(x)
+∀x∃y: LoyalTo(x,y)
+∀x: [PostGraduate(x) ⋁ Graduate(x)] ⋀ Experience(x)  => Selected(x)
