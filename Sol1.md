@@ -1,1 +1,0 @@
-∀x: Italian(x) → Roman(x)
