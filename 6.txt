@@ -1,0 +1,3 @@
+Ate(Kishore, Warm(Samosa), 1)
+Telling(Kishore, Prashanth, Password)
+Informed(Anil, PoliceOfficer, Address(Anil))
