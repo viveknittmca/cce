@@ -1,0 +1,1 @@
+\bigvee x : Italian(x) \to Roman(x)
