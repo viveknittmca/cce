@@ -1,33 +1,33 @@
-	             ##Deductive  Reasoning (Top Down Strategy)	                ##Inductive Reasoning (Bottom Up Strategy) 
-Definition	The process of reasoning from one or more general        The process of constructing or evaluating general 
+	         Deductive  Reasoning (Top Down Strategy)	            Inductive Reasoning (Bottom Up Strategy) 
+Definition  The process of reasoning from one or more general        The process of constructing or evaluating general 
             statements regarding what is known to reach a            propositions that are derived from specific examples.
             logically certain conclusion	 
             
             
-Approach	  It works from the more general to the more specific.     It works by moving from specific observations to 
+Approach    It works from the more general to the more specific.     It works by moving from specific observations to 
             Informally called as "top-down" approach                 broader generalizations and theories. Informally, 
                                                                      called as "bottom up" approach 
             
-	          We might begin with thinking up a theory about our       We begin with specific observations and measures, 
-	          topic of interest. We then narrow that down into         begin to detect patterns and regularities, formulate
-	          more specific hypotheses that we can test.               tentative hypotheses that we can explore, and finally
-	          We narrow down even further when we collect              end up developing some general conclusions/theories.
-	          observations to address the hypotheses.  
+	    We might begin with thinking up a theory about our       We begin with specific observations and measures, 
+	    topic of interest. We then narrow that down into         begin to detect patterns and regularities, formulate
+	    more specific hypotheses that we can test.               tentative hypotheses that we can explore, and finally
+	    We narrow down even further when we collect              end up developing some general conclusions/theories.
+	    observations to address the hypotheses.  
 	          
-	          THEORY=>HYPOTHESIS=>OBSERVATION=>CONFIRMATION	           OBSERVATION=>PATTERN =>HYPOTHESIS(TENTATIVE)=>THEORY
+	    THEORY=>HYPOTHESIS=>OBSERVATION=>CONFIRMATION	     OBSERVATION=>PATTERN =>HYPOTHESIS(TENTATIVE)=>THEORY
 	          
 	          
-Argument 	  Arguments are either Valid or Invalid (Based on          Arguments are either Strong or Weak (Based on Degree  
- Typ        of Correctness of Inference) &                           Support provided by Premises) &
-            Can be Sound/Unsound. 	                                 can be Cogent/Uncogent. 
+Argument    Arguments are either Valid or Invalid (Based on          Arguments are either Strong or Weak (Based on Degree  
+ Types      of Correctness of Inference) &                           Support provided by Premises) &
+            Can be Sound/Unsound. 	                             Can be Cogent/Uncogent. 
             
             Invalid arguments are always Unsound.                    Weak arguments are always Uncogent. 
             Valid arguments are sound only if the premises           Strong arguments are Cogent only if the premises
-            they are based upon are true.	                           they are based upon are true.
+            they are based upon are true.	                     they are based upon are true.
             
-Examples	  Valid: All men are Mortal. Socrates is a Man             Strong: There are 100 apples. 95 are Ripe. 
-                   =>  Socrates is Mortal	                                   => All apples are Ripe  
-	          If it rains today, then roads will be wet tommorow.      Weak : There are 100 apples. 5 are Ripe  
+Examples    Valid: All men are Mortal. Socrates is a Man             Strong: There are 100 apples. 95 are Ripe. 
+                   =>  Socrates is Mortal	                             => All apples are Ripe  
+	    If it rains today, then roads will be wet tommorow.      Weak : There are 100 apples. 5 are Ripe  
             Modus Ponens:                                                   => All apples are Ripe 
                 It rains today                                              (Degree of support from Premisesis very less)
                 => Roads will be wet tomorrow.                      	
