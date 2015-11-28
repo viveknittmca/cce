@@ -1,8 +1,10 @@
 	         Deductive  Reasoning (Top Down Strategy)	            Inductive Reasoning (Bottom Up Strategy) 
+	    #############################################################################################################
 Definition  The process of reasoning from one or more general        The process of constructing or evaluating general 
             statements regarding what is known to reach a            propositions that are derived from specific examples.
             logically certain conclusion	 
             
+            ===============================================================================================================
             
 Approach    It works from the more general to the more specific.     It works by moving from specific observations to 
             Informally called as "top-down" approach                 broader generalizations and theories. Informally, 
@@ -15,8 +17,9 @@ Approach    It works from the more general to the more specific.     It works by
 	    observations to address the hypotheses.  
 	          
 	    THEORY=>HYPOTHESIS=>OBSERVATION=>CONFIRMATION	     OBSERVATION=>PATTERN =>HYPOTHESIS(TENTATIVE)=>THEORY
-	          
-	          
+	    
+	    ===============================================================================================================    
+	    
 Argument    Arguments are either Valid or Invalid (Based on          Arguments are either Strong or Weak (Based on Degree  
  Types      of Correctness of Inference) &                           Support provided by Premises) &
             Can be Sound/Unsound. 	                             Can be Cogent/Uncogent. 
@@ -25,6 +28,8 @@ Argument    Arguments are either Valid or Invalid (Based on          Arguments a
             Valid arguments are sound only if the premises           Strong arguments are Cogent only if the premises
             they are based upon are true.	                     they are based upon are true.
             
+           ================================================================================================================
+           
 Examples    Valid: All men are Mortal. Socrates is a Man             Strong: There are 100 apples. 95 are Ripe. 
                    =>  Socrates is Mortal	                             => All apples are Ripe  
 	    If it rains today, then roads will be wet tommorow.      Weak : There are 100 apples. 5 are Ripe  
