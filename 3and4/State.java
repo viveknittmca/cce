@@ -124,9 +124,11 @@ public class State
         }
     }
 
-    public String getMove()
+
+
+    public String getMove(String prefix)
     {
-        String move = "";
+        String move = null;
         if(toMove == MoveTypes.RIGHT)
         {
             move = emptyTileRow+","+ (emptyTileCol-1) +" => "+ emptyTileRow +","+ emptyTileCol;
@@ -144,13 +146,18 @@ public class State
             move = (emptyTileRow-1)+","+ emptyTileCol +" => "+ emptyTileRow +","+ emptyTileCol;
         }
 
-        if(move.isEmpty()) return "Start State:";
-        return "Moved: " + move;
+
+        return move!=null? (prefix+ " : "+ move): "Start State";
     }
 
     public void print()
     {
-        System.out.println(getMove());
+        print("Moved");
+    }
+
+    public void print(String prefix)
+    {
+        System.out.println(getMove(prefix));
         for(int row = 0; row < puzzleSize; row++)
         {
             for(int col = 0; col < puzzleSize; col++)
