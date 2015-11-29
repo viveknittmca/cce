@@ -1,0 +1,44 @@
+Uniform Cost Search: 
+
+Given:
+     PathCost(S,A) = 1; PathCost(S,B) = 5, PathCost(S,C) = 15
+     PathCost(A,G) =10; PathCost(B,G) = 5, PathCost(C,G) =  5
+     
+Initialization:
+   StartNode     = S
+   GoalNode      = G
+   PriorityQueue = {S(0)} 
+
+Step1:     
+      CurrentNode = PriorityQueue.poll()
+                = S  
+     
+      At CurrentNode S:              
+         PathCost(S,A) < PathCost(S,B) < PathCost(S,C) => PriorityQueue {A(1),B(5),C(15)}      
+      i.e. 1 < 5 <15
+    
+Step2:    
+      CurrentNode = PriorityQueue.poll()
+                 = A
+                
+      At CurrentNode A:
+         PathCost(S,B) < PathCost(S,A)+PathCost(A,G) < PathCost(S,C) => PriorityQueue{B(5),G(11),C(15)}        
+      i.e 5 < 11 < 15
+        
+Step3:
+      CurrentNode = PriorityQueue.poll()
+                 = B
+                 
+      At CurrentNode B:
+          PathCost(S,B) + PathCost(B,G) < PathCost(S,A) + PathCost(A,G) <  PathCost(S,C) => PriorityQueue{G(10),C(15)}
+      i.e 10 < 11 < 15   
+         
+Step4: 
+      CurrentNode = PriorityQueue.poll()
+                  = G
+      
+      TotalPathCost = 10                    
+      This is the Shortest Path from S->G.
+      Thus Uniform Cost Search results in Optimal Solution.
+      
+      
