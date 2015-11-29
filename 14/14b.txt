@@ -1,10 +1,14 @@
+
+Problem Statement(8-Puzzle): 
+   Given a board with tiles numbered from 1-8 and a blank tile reach a desired arrangement of tiles.
+  
 State Space:
      Using an Array(1-D or 2-D) 
      0 to denote Blank Tile
      
 States :
    Start State:  <1,2,3,4,5,6,7,0,8>  (example)
-   Goal State :  <1,2,3,4,5,6,7,8,0>  (example)
+   Goal  State:  <1,2,3,4,5,6,7,8,0>  (example)
    
 Operators:
    These operators are w.r.t the Blank Tile
@@ -14,23 +18,25 @@ Operators:
     c. LEFT  (Move Left  If not in the first column)
     d. RIGHT (Move Right If not in the last column)
 
+Initialization:
+   CurrentState := StartState
 Goal Test:
-    Post any Movement by any of 4 operators above
     Check if Current State == Goal State   
-          then SUCCESS
+          then TERMINATE with SUCCESS
+          else Move the Blank Tile
           
 Path Cost:
     For Every Move of BlankTile 
         PathCost += 1
         
 Search Problem:
-    Any search approach should start from Start State 
-    Move the Blank Tile in any one direction and Generate a New State.
-    Each direction gives rise to a branch which needs to be explored one by one 
-    Each Branch will have a New State
-    Pick one of the State and Check 
+    1. Any search approach should start from Start State 
+    2. Move the Blank Tile in each direction and Generate a New State.
+    3. Each direction gives rise to a branch which needs to be explored one by one 
+    4. Each Branch will have a New State
+    5. Pick one of the New State and Check 
          If that New State is Goal State.
          Then return true;
          Else Pick next New State and continue;
          
-   Thus by very nature exploring for a goal state results in a search problem.
+   Thus by very nature exploring for a goal state by generating next possible states results in a search problem.
