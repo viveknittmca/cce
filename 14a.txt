@@ -1,0 +1,6 @@
+Completeness: When many solutions exist for a problem, Will the algorithm(heuristic) guarantee in finding 
+              atleast ONE solution ?
+              If then the algorithm is Complete else Incomplete.
+Optimality  : When many solutions exist for a problem, Will the algorithm(heuristic) guarantee in finding
+              the BEST solution ?
+              If then the algorithm is Optimal else Unoptimal
