@@ -1,5 +1,3 @@
-package tsp;
-
 /**
  * Created with IntelliJ IDEA.
  * User: vivek.rajendran
