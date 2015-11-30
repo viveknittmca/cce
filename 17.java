@@ -4,23 +4,25 @@ public class CryptarithSolver
 {  
 	  public String solve(String puzzle) 
 	  {
-		    char c = 0;
+		    char firstLetter = 0;
 		    /* Get the 1st Letter in the Puzzle which needs to be replaced */
 		    for (int i = 0; i < puzzle.length(); ++i) 
 		    {
 			      if (Character.isLetter(puzzle.charAt(i))) 
 			      {
-				        c = puzzle.charAt(i);
+				        firstLetter = puzzle.charAt(i);
 				        break;
 			      }
 		    }
 		    
 		    /* If C is 0 at this point Then all Letters have been replaced. So Evaluate now */
-		    if (c == 0) 
-		    {
-			      String[] expression = puzzle.split("=");
-			      int lhs = evaluate(expression[0]), rhs = evaluate(expression[1]);
-			      if ( lhs == rhs) 
+		    String[] expression = puzzle.split("=");
+		    String lhs = expression[0].trim();
+		    String rhs = expression[1].trim();
+		    if (firstLetter == 0) 
+		    {			      
+			      int lhsValue = evaluate(lhs), rhsValue = evaluate(rhs);
+			      if ( lhsValue == rhsValue) 
 			    	  return puzzle;
 			      else 
 			    	  return "";
@@ -32,23 +34,23 @@ public class CryptarithSolver
 			      
 			      for (int i = 0; i < puzzle.length(); ++i)
 			      {
-			    	    /*If number is used in Puzzle then set its slot to TRUE in this array*/
+			    	    /* If number is used in Puzzle then set its slot to TRUE in this array */
 				        if (Character.isDigit(puzzle.charAt(i)))
 				           numberUsed[puzzle.charAt(i)-'0'] = true;
 			      }
 			      
-			      /* Use the Unused Number so far.*/
+			      /* Use the Unused Number so far */
 			      for (int i = 0; i < 10; ++i) 
-			      {
-			    	    /* Avoid if it is replacing the 1st Letter in the Sum/Product to 0 */
-			    	    String replacee = String.valueOf(c);	
+			      {			    	    
+			    	    String replacee = String.valueOf(firstLetter);	
 			    	    String replacer = String.valueOf(i);
-				        if (numberUsed[i] && !( (i==0) && puzzle.split("=")[1].trim().startsWith(replacee) )  ) 
+
+			    	    /* Avoid if it is replacing the 1st Letter in the Sum/Product to 0 */
+				        if (!numberUsed[i] && !( (i==0) && rhs.startsWith(replacee) )  ) 
 				        {				        	  
-					          String r = solve(puzzle.replaceAll(replacee, replacer));
-					          //if (!r.isEmpty() && !r.split("=")[1].trim().startsWith("0")) 
-					          if(!r.isEmpty())
-					        	  return r;
+					          String result = solve(puzzle.replaceAll(replacee, replacer));					           
+					          if(!result.isEmpty())
+					        	  return result;
 				        }
 			      }
 		    }
@@ -98,6 +100,5 @@ public class CryptarithSolver
     		  System.out.println(solvedPuzzle);
     	  else 
     		  System.out.println("No Solution Exists");
-      }
-  
+      }  
 }
