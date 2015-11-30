@@ -1,3 +1,6 @@
+/* Invoke the program with command line args as below
+*   >> java CryptarithSolver SEND + MORE = MONEY
+*/
 import java.util.*;
 
 public class CryptarithSolver 
