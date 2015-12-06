@@ -1,0 +1,22 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- [user].
+
+|: move( state(middle, onbox, middle, hasnot), grasp, state(middle, onbox, middle, has) ).
+|: move( state(P, onfloor, P, H), climb,  state(P, onbox, P, H) ).
+|: move( state(P1, onfloor, P1, H), push(P1, P2),  state(P2, onfloor, P2, H) ).
+|: move( state(P1, onfloor, B, H), walk(P1, P2), state(P2, onfloor, B, H) ).
+|: canget( state(_,_,_,has), [] ).
+|: canget(State1,[M|List]) :- move(State1,M,State2), canget(State2,List).
+|: solve(Moves) :- canget(state(atdoor,onfloor,atwindow,hasnot),Moves).
+|: 
+true.
+
+2 ?- solve(Moves).
+Moves = [walk(atdoor, atwindow), push(atwindow, middle), climb, grasp] 
