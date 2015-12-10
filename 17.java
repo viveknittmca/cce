@@ -18,7 +18,7 @@ public class CryptarithSolver
 			      }
 		    }
 		    
-		    /* If C is 0 at this point Then all Letters have been replaced. So Evaluate now */
+		    /* If firstLetter is 0 at this point Then all Letters have been replaced. So Evaluate now */
 		    String[] expression = puzzle.split("=");
 		    String lhs = expression[0].trim();
 		    String rhs = expression[1].trim();
